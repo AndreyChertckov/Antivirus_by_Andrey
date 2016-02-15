@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="457.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <children>
+    <Label layoutX="44.0" layoutY="28.0" text="Введи путь к файлу">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <TextField fx:id="textFieldPath" alignment="TOP_LEFT" layoutX="44.0" layoutY="63.0" prefHeight="26.0" prefWidth="387.0" text="Путь" />
+    <Button layoutX="229.0" layoutY="212.0" mnemonicParsing="false" onAction="#clickSearch" text="Проверить" />
+    <Button layoutX="352.0" layoutY="212.0" mnemonicParsing="false" onAction="#clickCancel" text="Выйти" />
+    <Label fx:id="Progress" layoutX="45.0" layoutY="107.0" prefHeight="35.0" prefWidth="387.0" text="Антивирус готов к работе" />
+  </children>
+</AnchorPane>
