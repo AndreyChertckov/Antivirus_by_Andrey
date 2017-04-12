@@ -16,10 +16,11 @@ public class Scanner implements Runnable{
     File dir;
     List<File> allFiles = new ArrayList<>();
     List<File> newFiles = new ArrayList<>();
-    int bitch =-1;
+    int indOfFile =-1;
     Report report;
     File startupFile;
     String path = "C:\\Users\\"+Main.USER+"\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
+
     Scanner(Report r){
         startupFile = new File(Main.PATH+"startup.txt");
         if (!startupFile.exists()) try {
@@ -72,7 +73,7 @@ public class Scanner implements Runnable{
                                     break;
                                 } else {
                                     report.reportMessageAutoStart(newFiles.get(i).getName(), "NO");
-                                    bitch = i;
+                                    indOfFile = i;
                                     break;
                                 }
 
@@ -81,11 +82,11 @@ public class Scanner implements Runnable{
                         }
 
                     }
-                    if (bitch != -1) {
-                        newFiles.get(bitch).delete();
-                        newFiles.remove(bitch);
+                    if (indOfFile != -1) {
+                        newFiles.get(indOfFile).delete();
+                        newFiles.remove(indOfFile);
                     }
-                    bitch = -1;
+                    indOfFile = -1;
                     allFiles.clear();
                     startupList.clear();
                     for (File pat : dir.listFiles()) {
